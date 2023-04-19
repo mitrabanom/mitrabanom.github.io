@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kembali</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style type="text/css" media="all">
+  *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body{
+ background-color: #EDF1FC;
+  }
+  .bg-inti{
+    background-color: #04befe;
+  }
+  .bg-mix{
+    background-color: #EDF1FC;
+  }
+  .color-mix{
+    color: #EDF1FC;
+  }
+  .color-inti{
+    color: #04befe;
+  }
+  h1 h2 h3 h4 h5 h6 p{
+    margin:0; 
+    padding: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+ .status p{
+   margin-bottom: 0px;
+   font-size: 12px;
+ }
+ .font-color{
+   color: #102466;
+ }
+  .op8{
+    opacity: 0.8;
+  }
+  .op6{
+    opacity: 0.4;
+  }
+  .bold{
+    font-weight: bold;
+  }
+.header{
+  width: 100%;
+  height: 8rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.btn:hover{
+  color: black;
+}
+.dropdown{
+  width: 100%;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+.dropdown-item{
+  width: 100%;
+}
+.dropdown-menu{
+  width: 98%;
+  text-align: left;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.dropdown-menu input{
+  width: 95%;
+  height: auto;
+  padding: 0.5rem;
+  margin-left: 2.5%;
+  border-radius: 7px;
+  border: 1px solid rgb(200,200,200);
+  outline: none;
+  font-size: 14px;
+}
+.inputan label{
+  font-size: 14px;
+  position: absolute;
+  background-color: white;
+  margin-left: 10px;
+  
+}
+.inputan input{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgb(210,210,210);
+  margin-top: 10px;
+  outline: none;
+}
+.cekname input{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgb(210,210,210);
+  margin-top: 10px;
+  outline: none;
+}
+.cekname label{
+  font-size: 14px;
+  position: absolute;
+  background-color: white;
+  margin-left: 10px;
+}
+.cekname button{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.row-pilihan{
+  height: auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.row-pilihan button{
+  border: none;
+  padding:0.5rem;
+  border-radius: 10px;
+}
+.btn-aktif{
+  background-color: #04befe;
+  color: white;
+}
+.font-color {
+  color : red
+}
+.warna-font {
+  color : #04befe;
+}
+
+</style>
+  </head>
+  <body>
+    <!-- NAVIGASI ATAS -->
+ <div class="container header bg-inti text-white">
+   <h6 style="padding-top:1rem; text-align:center; font-size: 15px;">Isi Saldo E-Wallet & E-Money </h6>
+   
+   <div class="container">
+     
+    <div class="dropdown mt-4">
+   
+  <a style="padding:0.1rem; font-size: 13px; padding-left:18%; width:100%; opacity:0.8" class="dropdown-toggle text-center mt-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Daftar E-wallet & E-money 
+  </a>
+
+  
+  <ul style="height:400px; display: absolute; width:100%; overflow:auto" class="dropdown-menu mt-1">
+    <input type="text" name="" id="boxSearch" value="" placeholder="cari games..."/>
+    <li><p style="font-size:12px; margin-left:5%; opacity:0.6" class="mt-3">E-wallet</p></li>
+    
+    
+    <div  class="listSearch" id="menu-card-pilihan">
+      
+    </div>
+    
+    
+    <li><p style="font-size:12px; margin-left:5%; opacity:0.6" class="mt-3 mt-2">E-money & Lainnya</p></li>
+    <div class="listSearch" id="emoney-menu-card-pilihan">
+      
+    </div>
+    
+    
+    
+  </ul>
+</div>
+   </div>
+ </div>
+    <!-- END NAVIGASI ATAS -->
+    
+    
+  <!-- INPUTAN USERNAME -->
+<div class="container mt-3" id="inputan-user-card">
+  
+  
+</div>
+  <!--END INPUTAN USERNAME -->
+
+
+<!-- NAVIGASI KLIK PRODUK -->
+
+
+<!-- END NAVIGASI KLIK PRODUK -->
+
+
+  <!-- PRODUK -->
+  
+<div class="container" id="card-show-produk">
+  <div id="card-this-produk">
+
+    
+    
+  </div>
+</div>
+  <!-- END PRODUK -->
+
+
+<!-- NAVIGASI KLIK PRODUK -->
+  <!-- Tampilan awal produk -->
+
+  <div class="container" id="data_kosong">
+    <div style="background-color: transparan; border-radius:5px;" class="container p-4  text-center">
+      <img style="width:100%" class="mb-3" src="https://i.postimg.cc/XqvfRkWX/IMG-20221112-180301-removebg-preview.png" alt="" />
+      <h6 style="font-weight:bold;">PILIH KATEGORI TERLEBIH DAHULU </h6>
+      <p style="font-size:10px; color:red;"><i>Tekan arah panah bagian atas daftar E-Wallet & E-Money..</i></p>
+
+    </div>
+  </div>
+
+ <div id="loading-esaku" class="loading-esaku mt-5">
+     <div class="container text-center mt-5">
+       <img style="width:40%;" src="https://i.postimg.cc/XJzG7Wp0/google-loading-icon-qgdhn1xi84-unscreen.gif" />
+       <p class="font-color" id="red"></p>
+     </div>
+   </div>
+  
+
+<!-- END NAVIGASI KLIK PRODUK -->
+
+  
+  
+
+
+
+
+
+<!-- Modal -->
+<div style="margin-top:5rem;" class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-inti text-white text-center">
+        <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembelian</h5>
+      </div>
+      <div class="modal-body">
+        
+        
+        
+        
+        <div class="container">
+          
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-3">
+          <div class="col-6 text-left">
+            <h6>Nomor </h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="inputan-user"></h6>
+          </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-4">
+          <div class="col-6 text-left">
+            <h6>Nama </h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="html-nickname">null</h6>
+          </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-4">
+          <div class="col-6 text-left">
+            <h6>Topup</h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="detail-nama-produk"></h6>
+          </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219); padding-bottom:20px;" class="deskripsi ">
+                <h6>Deskripsi:</h6>
+                <small class="font-color" id="detail-nama-deskripsi"></small>
+              </div>
+          
+          
+          <div style="padding-bottom:10px; font-weight:bold;" class="row mt-3">
+          <div class="col-6 text-left">
+            <h6>Total bayar</h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="detail-nama-total"></h6>
+          </div>
+          </div>
+          
+          
+        </div>
+        
+        
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  bg-warning" data-bs-dismiss="modal">Batal</button>
+        <a id="linknya-hallo" href="">
+        <button type="button" class="btn bg-inti">Bayar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br /><br /><br />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    $("#produk_kosong").hide(); 
+    $("#btn-user-card").hide();
+    $("#data_kosong").show(); 
+    $("#loading-esaku").hide(); 
+
+  
+  let json =[
+    {
+      "dana" : {
+        "nama" : "Dana",
+        "url" : "dana-256901",
+        "gambar" : "https://i.postimg.cc/prZFmtP2/images-3.png",
+        "cekid" : "https://bayarimo.my.id/cekid/api/ewallet/dana/?hp=",
+      },
+      
+      
+      "ovo" : {
+        "nama" : "Ovo",
+        "url" : "ovo-256718",
+        "gambar" : "https://i.postimg.cc/ZRbQNygk/images-2.jpg",
+        "cekid" : "https://bayarimo.my.id/cekid/api/ewallet/ovo/?hp=",
+      },
+      
+      
+      "gopay" : {
+        "nama" : "Gopay",
+        "url" : "go-pay-256618",
+        "gambar" : "https://i.postimg.cc/ydhV19Zw/images-1.jpg",
+        "cekid" : "https://bayarimo.my.id/cekid/api/ewallet/gopay/?hp=",
+      },
+      
+      
+      
+      "linkaja" : {
+        "nama" : "LinkAja",
+        "url" : "linkaja-256934",
+        "gambar" : "https://i.postimg.cc/gcqJm9yn/Link-Aja-svg.png",
+       "cekid" : "https://bayarimo.my.id/cekid/api/ewallet/linkaja/?hp=",
+      },
+      
+
+      
+      "isaku": {
+        "nama": "Isaku",
+        "url": "i-saku-256997",
+        "gambar": "https://i.postimg.cc/wMhsd7qv/images-4.png",
+       "cekid" : "https://bayarimo.my.id/cekid/api/ewallet/isaku/?hp=",
+      },
+      
+      "shopeepay": {
+        "nama": "Shopeepay",
+        "url": "shopee-pay-256948",
+        "gambar": "https://i.postimg.cc/rF15BYsJ/images-5.png",
+        "cekid": "https://bayarimo.my.id/cekid/api/ewallet/shopeepay/?hp=",
+      },      
+      
+    }
+    ];
+  
+  let emoney = [
+    {
+      "brizzi" : {
+        "nama" : "Brizzi (BRI)",
+        "url" : "bri-brizzi-302875",
+        "gambar" : "https://i.postimg.cc/25cQHbyN/images-3.jpg",
+        "cekid" : "KOSONG",
+      },
+      
+      
+      "sakuku" : {
+        "nama" : "Sakuku (BCA)",
+        "url" : "sakuku-305379",
+        "gambar" : "https://i.postimg.cc/rmHD45mz/download.jpg",
+        "cekid" : "KOSONG",
+      },
+      
+      
+      "tapcash" : {
+        "nama" : "Tapcash (BNI)",
+        "url" : "tapcash-bni-302807",
+        "gambar" : "https://i.postimg.cc/rsdtZQbS/download.png",
+        "cekid" : "KOSONG",
+      },
+   
+      
+      "bukalapak" : {
+        "nama" : "Bukalapak",
+        "url" : "bukalapak-256736",
+        "gambar" : "https://i.postimg.cc/bJwnkz9V/images-4.jpg",
+       "cekid" : "KOSONG=",
+      },
+
+        "maxim": {
+        "nama": "Maxim Driver",
+        "url": "maxim-driver-303302",
+        "gambar": "https://i.postimg.cc/1zZcnhdb/images-5.jpg",
+       "cekid" : "KOSONG",
+      },
+      
+      "grab": {
+        "nama": "Grab Penumpang",
+        "url": "grab-penumpang-256810",
+        "gambar": "https://i.postimg.cc/65YDfzKH/images-6.png",
+        "cekid": "KOSONG",
+      },      
+      
+    }
+    ];      
+
+  
+  // cetak menu bagian atas pilihan kategori ini 
+  function loopingMenu1(lopp){
+  $.each(lopp, function(i, data){
+     $('#menu-card-pilihan').append(`<li class="mt-3" onclick="sendData('`+data.nama+`', '`+data.url+`', '`+data.gambar+`','`+data.cekid+`')">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-2">
+            <img style="width:100%; height:auto; border-radius:50px;" src="`+data.gambar+`" alt="" />
+          </div>
+          <div style="font-size:14px; opacity:0.8;" class="col-10">
+            `+data.nama+`
+          </div>
+        </div>
+      </div>
+    </li>`);
+      });
+   
+
+  }  loopingMenu1(json[0]);
+  
+  
+  
+  function loopingMenu2(lopp){
+  $.each(lopp, function(i, data){
+     $('#emoney-menu-card-pilihan').append(`<li class="mt-3" onclick="sendData('`+data.nama+`', '`+data.url+`', '`+data.gambar+`','`+data.cekid+`')">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img style="width:100%; height:auto; border-radius:50px;" src="`+data.gambar+`" alt="" />
+          </div>
+          <div style="font-size:14px; opacity:0.8;" class="col-10 mt-1">
+            `+data.nama+`
+          </div>
+        </div>
+      </div>
+    </li>`);
+      });
+   
+
+  }  loopingMenu2(emoney[0]);
+  
+  
+   $(document).ready(function($){
+
+        $('.listSearch li').each(function(){
+            $(this).attr('searchData', $(this).text().toLowerCase());
+        });
+        $('#boxSearch').on('keyup', function(){
+        var dataList = $(this).val().toLowerCase();
+            $('.listSearch li').each(function(){
+              
+                if ($(this).filter('[searchData *= ' + dataList + ']').length > 0 || dataList.length < 1) {
+                    $(this).show();
+                }else if($("#boxSearch").val() == "" || $("#boxSearch").val() == " " || $("#boxSearch").val() == null || $("#boxSearch").val().length == 0){
+                  loopingMenu(json[0]);
+                }
+                else {
+                    $(this).hide();
+                }
+            });
+        });
+    
+    });
+  
+  
+  
+  
+  
+  
+  
+  
+  // show input value ml, ff atur jumlah input yang akan di tampilkan 
+  function showInput(val, nama, gambar, cekid){
+ 
+    $(".konten-inputan-user").remove();
+     $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container bg-white konten-inputan-user shadow mb-3" >
+    <div class="mt-4">
+      <div class="row mt-3">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-3 inputan">
+      <label for="">nomor ewallet</label>
+          <a href="https://bayarimopay.webtoko.net/ambil_kontak">
+            <span class="material-icons warna-font" style="margin-top: 20px; margin-left: 270px; position: absolute; font-size: 30px ">
+              perm_contact_calendar
+            </span>
+          </a>
+      
+          <input style="width:100%; height: 50px; border-radius:8px; border:1px solid rgb(225,225,225); font-size:18px; outline:none;" class="p-2 {{hasil_kontak}}"
+      <input type="tel" name="" id="input-user-val" value="" placeholder="Masukkan nomor ponsel..."/>
+    </div>
+    <div class="cekname mt-3">
+      <div class="row">
+        <div class="col-8">
+          <label for="">A/N</label>
+          <input class="warna-font" type="text" name="" id="hasilIdGames" value="" placeholder="cek penerima.." readonly/>
+        </div>
+        <div class="col-4">
+          <button onclick="cekId('`+cekid+`')" class="bg-inti" type="button">CEK</button>
+        </div>
+      </div>
+    </div>
+    
+    <br />
+  </div>`);
+    
+  }
+  
+
+  function showInput2(val, nama, gambar, cekid){
+ 
+    $(".konten-inputan-user").remove();
+     $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container shadow bg-white konten-inputan-user mb-3" >
+    <div class="mt-4">
+      <div class="row mt-3 ">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-3 inputan">
+              <a href="https://bayarimopay.webtoko.net/ambil_kontak">
+                <span class="material-icons warna-font" style="margin-top: 22px; margin-left: 270px; position: absolute; font-size: 30px ">
+                  perm_contact_calendar
+                </span>
+              </a>
+    
+
+      <label for="">nomor emoney</label>
+              <input style="width:100%; height: 50px; border-radius:8px; border:1px solid rgb(225,225,225); font-size:18px; outline:none;" class="p-2 {{hasil_kontak}}"      
+      <input type="tel" name="" id="input-user-val" value="" placeholder="Masukkan nomor ponsel..."/>
+    </div>
+    
+    <br />
+  </div>`);
+    
+  }
+  
+  
+  function titik(angka){
+    let a = angka;
+   let b = a.replace("Rp","Rp. ");
+    return b;
+  }
+  
+  
+  // looping produk
+  function loopingProduk(produk){
+    $("#card-show-produk").show();
+    $(".data-card-produk-produk").remove();
+    $.each(produk, function(i, data){
+     $('#card-this-produk').append(`<div class="mt-2  data-card-produk-produk" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="showDeskripsi('`+data.nama+`','`+data.harga+`','`+data.url+`')">
+      <div style="background-color:white; border-radius:12px" class="container shadow p-3">
+     <div class="row align-items-center">
+   <div class="col-3">
+     <img style="width:85%; border-radius:8px; margin-left :12px;" src="`+data.gambar+`" alt="" />
+   </div>
+  <div class="col-6" style="font-size:16px;">
+    `+data.nama+`
+  </div>
+  <div class="col-3">
+   <b style="font-size:15px; margin-right:10px">`+titik(data.harga)+`</b>
+  </div>
+     </div>   
+      </div>
+    </div>`);
+      });
+  }
+  
+  
+
+  function showDeskripsi(nama, harga,link){
+    
+   $("#inputan-user").html($("#input-user-val").val());
+   
+   document.getElementById("linknya-hallo").href = link+"?catatan="+$("#input-user-val").val();
+   
+   $("#detail-nama-produk").html(nama);
+
+   $("#detail-nama-total").html(harga);
+   
+   let url = "https://bayarimo.my.id/member/id/v1/bo/api";
+   let aktivasi = "c7f17e2a853d069f7982a34035c803a3cd7ddbb2656630fa1af731abcd21f533";
+  let param = 
+   {
+     "aktivasi" : aktivasi,
+     "param" : "detail",
+     "url" : link,
+   }
+   $.post(url, param, 
+   function(data, status){
+    $("#detail-nama-deskripsi").html(data.data);
+   });
+  
+    
+  }
+  
+  
+  
+  // get request data produk
+  function getApi(kategori, gambar){
+    $("#produk_kosong").hide();
+   $("#loading-esaku").show();
+    $("#data_kosong").hide();
+
+//  let url = "https://bayarimo.my.id/api-bo/produk_pulsa.php?kategori=";
+let url = "https://bayarimo.my.id/member/id/v1/bo/api";
+  let hallo = "https://bayarimopay.webtoko.net";
+  let aktivasi = "c7f17e2a853d069f7982a34035c803a3cd7ddbb2656630fa1af731abcd21f533";
+  
+
+
+   let param = 
+   {
+     "aktivasi" : aktivasi,
+     "param" : "produk",
+     "url" : hallo+"/kategori/"+kategori,
+   }
+   $.post(url, param, 
+   function(data, status){
+     if (data.kode == 200) {
+       loopingProduk(data.data);
+      $("#loading-esaku").hide();
+     }else{
+       $("#produk_kosong").show();
+      $("#loading-esaku").hide();
+      $("#data_kosong").hide();
+     }
+   //  console.log(data);
+    
+   });
+  }
+    
+  
+  
+    // klik btn
+ function btnKliked(e, url, gambar){
+$(".data-card-produk-produk").remove();
+   $(".btn-klik-btn").removeClass("btn-aktif");
+   $("#"+e).addClass("btn-aktif");
+   getApi(url, gambar);
+ //  console.log(url);
+ }
+  
+  
+  
+  
+  
+  // CEK ID GAMES 
+ function cekId(url){
+ if(url == "KOSONG"){
+   $("#hasilIdGames").hide();
+ }
+  $("#hasilIdGames").val("loading...");
+  
+  let nick = $("#input-user-val").val();
+  
+   $.getJSON(url+nick+"&key=8272b58207a73d9", function(data){
+     if(data.status == 200){
+       $("#hasilIdGames").val(data.name);
+     $("#html-nickname").html(data.name);
+     }else{
+       $("#hasilIdGames").val(data.error_msg);
+     $("#html-nickname").html(data.error_msg); 
+     }
+  // console.log(data)
+     
+});
+
+ } ;
+ 
+
+
+  
+  
+  
+  function sendData(nama, url, gambar, cekid){
+  //  console.log(kiri);
+  if(cekid == "KOSONG"){
+    $(".data-card-produk-produk").remove();
+    showInput2(url, nama, gambar, cekid);
+    getApi(url, gambar);
+  }else{
+    
+    $(".data-card-produk-produk").remove();
+    showInput(url, nama, gambar, cekid);
+    getApi(url, gambar);
+  }
+    
+  }
+  
+ 
+ 
+ 
+ 
+  
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+    
+  </body>
+</html>

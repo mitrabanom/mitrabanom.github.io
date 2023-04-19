@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kembali</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style type="text/css" media="all">
+    *{
+      font-family: 'Poppins', sans-serif;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body{
+     background-color: #EDF1FC;
+   }
+   .bg-inti{
+    background-color: #04befe;
+  }
+  .text-inti{
+    color: #04befe;
+  }
+  .bg-mix{
+    background-color: rgb(232,231,231);
+  }
+  .warna-font {
+    color : red;
+  }
+  #offcanvasBottom{
+    width: 100%;
+    top: 30%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100%;
+  }
+  .bg-img-produk{
+    background: url('https://i.postimg.cc/G2G46zzP/white-abstract-background-23-2148824101.webp');
+  }
+</style>
+</head>
+<body>
+  <!-- NAVIGASI ATAS -->
+  <div  class="container header height : 500px; bg-inti text-white p-2 pt-2">
+   <h4 style="text-align:center;">Pulsa</h4>
+ </div>
+ <!-- END NAVIGASI ATAS -->
+
+
+
+
+ <div class="container pt-4 bg-white">
+  <div class="container mt-2">
+   <a href="https://mitrabanom.bukaolshop.site/ambil_kontak">
+     <span class="material-icons text-inti" style="margin-top: 10px; margin-left: 270px; position: absolute; font-size: 30px">
+       perm_contact_calendar
+     </span>
+   </a>    
+    <input style="width:100%; height: 50px; border-radius:8px; border:1px solid rgb(225,225,225); font-size:18px; outline:none;" class="p-2 {{hasil_kontak}}" type="tel" name="" id="nomor-val" value="" placeholder="Nomor ponsel.." oninput="ceknomoruser()"/>
+    
+ <br /><br />
+</div>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-2">
+      <img id="img_operator" style="width:130%; border-radius:50px;" src="https://i.postimg.cc/SxbhjdLs/20221127-012751.png" alt="" /> 
+    </div>
+    <div class="col-7">
+      <h5 style="font-weight:bold; margin-top: 12px;" id="operator_produk">Operator</h5>
+    </div>
+    <br /><br />
+    <div class="col-3">
+      <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" style="font-size:14px; margin-top: 7px; border:1px solid #fff; border:none; color:white; padding:3px; border-radius:10px" class="bg-inti w-100 p-2" type="button">Pilih</button>
+    </div>
+  </div>
+
+</div>
+<br /><br /><br />
+
+
+</div>
+
+
+
+
+
+<div style="background-color:#EDF1FC; border-top-left-radius:30px; border-top-right-radius:30px; margin-top:-3rem;" class="container">
+
+
+  <div class="container">
+    <div class="row pt-3">
+      <div class="col-6">
+        <div onclick="pilihanPulsa('reguler')" style="border-radius:50px" class="container btn-pilihan-pulsa text-white  bg-inti text-center" id="klik_pulsa_reguler"> 
+          <h6 style="font-weight:normal; width:100%; height:auto; opacity:0.8" class="p-2">Reguler</h6>
+        </div>
+      </div>
+      <div class="col-6">
+       <div onclick="pilihanPulsa('transfer')"  style="border-radius:50px" class="container btn-pilihan-pulsa text-center" id="klik_pulsa_transfer">
+        <h6 style="font-weight:normal; width:100%; height:auto; opacity:0.8" class="p-2">Transfer</h6>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- LOOPING PRODUK -->
+<ul class="list-group mt-1">
+  <div class="row" id="looping_produk">
+
+
+  </div>
+</ul>
+
+
+<div class="container" id="produk_kosong">
+  <div style="background-color:white; border-radius:5px;" class="container p-4 shadow text-center">
+    <img style="width:80%" class="mb-3" src="https://i.postimg.cc/8zVKnv2B/20221019-222410.jpg" alt="" />
+    <h6 style="font-weight:bold;">PRODUK BELUM TERSEDIA</h6>
+    <p style="font-size:10px; color:red;"><i>Silahkan hubungi admin untuk menanyakan terkait produk ini.</i></p>
+    <a href="https://mitrabanom.bukaolshop.site/akun/?page=chat">
+      <button type="button" class="btn bg-inti">hubungi admin</button>
+    </a>
+  </div>
+</div>
+
+
+<div id="loading-esaku" class="loading-esaku mt-5">
+ <div class="container text-center mt-5">
+   <img style="width:40%;" src="https://i.postimg.cc/XJzG7Wp0/google-loading-icon-qgdhn1xi84-unscreen.gif" />
+   <p class="font-color" id="red"></p>
+ </div>
+</div>
+
+<div class="container" id="data_kosong">
+  <div style="background-color: transparan; border-radius:5px;" class="container p-4  text-center">
+    <img style="width:50%" class="mb-3" src="https://i.postimg.cc/XJzG7Wp0/google-loading-icon-qgdhn1xi84-unscreen.gif" alt="" />
+    <h6 style="font-weight:bold;"> </h6>
+    <p style="font-size:15px; color:black;"><i>Masukan nomor ponsel terlebih dahulu..</i></p>
+
+  </div>
+</div>
+<!-- END LOOPUNG PRODUK -->
+</div>
+
+
+
+
+
+
+
+<div  class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div style="color:white; border-top-right-radius:10px; border-top-left-radius:10px; text-align:center;" class="offcanvas-header bg-inti text-center">
+    <h5>Pilih Operator</h5>
+  </div>
+  <div class="offcanvas-body small">
+
+
+    <!-- LOOPING FATA GROUP KATEGORI -->
+    <div id="looping_kategori">
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div style="margin-top:5rem;" class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-inti text-white text-center">
+        <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembelian</h5>
+      </div>
+      <div class="modal-body">
+
+
+
+
+        <div class="container">
+
+
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-3">
+            <div class="col-6 text-left">
+              <h6>Nomor</h6>
+            </div>
+            <div style="text-align:right;" class="col-6 text-right">
+              <h6 id="nama_produk"></h6>
+            </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-4">
+            <div class="col-6 text-left">
+              <h6>Harga produk</h6>
+            </div>
+            <div style="text-align:right;" class="col-6 text-right">
+              <h6 id="harga_produk">null</h6>
+            </div>
+          </div>
+          
+
+          <div style="border-bottom:1px solid rgb(219,219,219); padding-bottom:20px;" class="deskripsi ">
+            <h6>Deskripsi:</h6>
+            <small id="detail-nama-deskripsi"></small>
+          </div>
+          
+          
+          <div style="padding-bottom:10px; font-weight:bold;" class="row mt-3">
+            <div class="col-6 text-left">
+              <h6>Total bayar</h6>
+            </div>
+            <div style="text-align:right;" class="col-6 text-right">
+              <h6 id="detail-nama-total"></h6>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Batal</button>
+        <a id="linknya-hallo" href="">
+          <button type="button" class="btn bg-inti">Bayar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br /><br /><br />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+  $("#loading-esaku").hide();
+  $("#produk_kosong").hide();
+  $("#data_kosong").show(); 
+  let json =[
+  {
+    "Indosat" :
+    {
+      "kode" : "Indosat",
+      "nama" : "Indosat",
+      "reguler" : "indosat-reguler-250831",
+      "transfer": "indosat-pulsa-transf-284735",
+      "gambar" : "https://i.postimg.cc/bw8jNrDc/images-2022-10-07-T132401-607.jpg",
+      "kode" : "Indosat",
+    },
+    
+
+    "Telkomsel" : {
+      "kode" : "Telkomsel",
+      "nama" : "Telkomsel",
+      "reguler" : "telkomsel-reguler-250830",
+      "transfer": "telkomsel-pulsa-tran-282143",
+      "gambar" : "https://i.postimg.cc/rFZpDSTX/images-2022-10-07-T132212-320.jpg",
+      "kode" : "Telkomsel",
+    },
+
+
+    "Tri" : {
+      "kode" : "Tri",
+      "nama" : "Tri indonesia",
+      "reguler" : "three-reguler-250838",
+      "transfer": "tri-pulsa-transfer-283782",
+      "gambar" : "https://i.postimg.cc/VkLmW5Y9/images-2022-10-07-T134356-702.jpg",
+      "kode" : "Tri",
+    },
+
+
+    "Xl" : {
+      "kode" : "Xl",
+      "nama" : "Xl Axiata",
+      "reguler" : "xl-reguler-250841",
+      "transfer": "xl-pulsa-transfer-283857",
+      "gambar" : "https://i.postimg.cc/rm2HgY16/download-3.jpg",
+      "kode" : "Xl",
+    },
+
+
+
+    "Axis" : {
+      "kode" : "Axis",
+      "nama" : "Axis",
+      "reguler" : "axis-reguler-250833",
+      "transfer": "axis-pulsa-transfer-283765",
+      "gambar" : "https://i.postimg.cc/qRfqknKc/images-2022-10-07-T132537-156.jpg",
+      "kode" : "Axis",
+    },
+
+
+
+
+    "Smartfren" : {
+      "kode" : "Smartfren",
+      "nama" : "Smartfren",
+      "reguler" : "smartfren-reguler-250835",
+      "transfer": "",
+      "gambar" : "https://i.postimg.cc/nL9KR4Zq/IMG-20221007-135231.jpg",
+      "kode" : "Smartfren",
+    },
+
+    "By.u" : {
+      "kode" : "By.u",
+      "nama" : "By.u",
+      "reguler" : "by-u-250843",
+      "transfer": "",
+      "gambar" : "https://i.postimg.cc/brHn05dF/download-2.png",
+      "kode" : "By.u",
+    },
+
+
+
+
+
+
+  }
+  ];
+  
+  
+  
+  function jsonProdukKategori(e){
+    let n = json[0][e].kategori;
+    return n;
+  }
+  
+  function urlJson(val){
+    let a= json[0][val].reguler;
+    return a;
+  }
+  
+  function urlJsonTranfer(val){
+    let a= json[0][val].transfer;
+    return a;
+  }
+  
+  
+  function jsonNama(val){
+    let a= json[0][val].nama;
+    return a;
+  }
+  
+  
+    // LOOPING KATEGORI PRODUK
+    function loopingKategoriProduk(lopp){
+      $.each(lopp, function(i, data){
+       $('#lopkategori_produk').append(`<li style="width:100%" class="dropdown-item pt-2" onclick="produkKategori('`+data.url+`')">
+        <div class="row">
+        <div class="col-2">
+        <span class="material-icons text-inti">
+        contacts
+        </span>
+        </div>
+        <div style="border-bottom:1px solid rgb(229,229,229)" class="col-10 pb-2">
+        <div class="row">
+        <div class="col-10">`+data.nama+`
+        </div>
+        <div class="col-2">
+        <span class="material-icons text-inti">
+        chevron_right
+        </span>
+        </div>
+        </div>
+        </div>
+        </div>
+        </li>`)
+     });
+
+    }
+
+
+
+  // LOOPING GORUP KATEGORI 
+  function loopingKategori(lopp){
+    $.each(lopp, function(i, data){
+     $('#looping_kategori').append(`<div data-bs-dismiss="offcanvas" class="row mt-2" onclick="pageKategori('`+data.nama+`', '`+data.reguler+`', '`+data.gambar+`', '`+data.kode+`')">
+       <div class="col-2">
+       <img style="width:100%; border-radius:50px;" src="`+data.gambar+`" alt="" />
+       </div>
+       <div style="border-bottom:1px solid rgb(229,229,229)" class="col-10 pb-2 pt-2">
+       <div class="row">
+       <div class="col-10">
+       <h6 style="font-weight:normal">`+data.nama+`</h6>
+       </div>
+       <div class="col-2">
+       <span class="material-icons text-inti">
+       chevron_right
+       </span>
+       </div>
+       </div>
+       </div>
+       </div>`)
+   });
+
+  }  loopingKategori(json[0]);  
+  
+  // LOOPING PRODUK
+  function loopingProduk(lopp, kategori){
+    $(".list-produk-pulsa").remove();
+    // console.log(lopp)
+    $.each(lopp, function(i, data){
+     $('#looping_produk').append(`<div style="padding:0.5rem" class="col-6 mt-1 list-produk-pulsa" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="showCanvas('`+data.nama+`', '`+data.harga+`', '`+data.url+`')">
+      <div style="border-radius:10px;" class="container shadow bg-img-produk bg-white p-3">
+      <p style="font-size:14px">`+data.harga+`</p>
+      <div class="text-center">
+      <h6 style="font-weight:bold;">`+data.nama+`</h6>
+      </div>
+      </div>
+      </div>`)
+   });
+
+  } 
+  
+  
+  
+  
+  
+  function showDeskripsi(link){
+    let url = "https://bayarimo.my.id/member/id/v1/bo/api";
+    let hallo = "https://mitrabanom.bukaolshop.site";
+    let aktivasi = "c7f17e2a853d069f7982a34035c803a3cd7ddbb2656630fa1af731abcd21f533";
+
+    var str = link.split("/")
+    var urlz = str[4]
+    // console.log(urlz)
+
+    let param = {
+      "aktivasi" : aktivasi,
+      "param" : "detail",
+      "url" : hallo+"/produk/"+urlz,
+    }
+
+    $.post(url, param,
+      function(data){
+        console.log(data)
+      $("#detail-nama-deskripsi").html(data.data);
+      $("#inputan-user").html($("#input-user-val").val());
+      document.getElementById("linknya-hallo").href = hallo+"/produk/"+urlz+"?catatan="+$("#nomor-val").val();
+    });
+    
+  }
+  
+  
+  
+  function showCanvas(nama, harga, url){
+   console.log(url);
+   $("#nama_produk").html($("#nomor-val").val());
+   $("#harga_produk").html(harga);
+   $("#detail-nama-total").html(harga);
+   showDeskripsi(url);
+ }
+
+
+
+ function kosong(){
+
+ }
+
+
+
+   // get request data produk
+   function getApi(kategori, nama){
+     $("#produk_kosong").hide();
+     $(".list-produk-pulsa").remove();
+     $("#loading-esaku").show();
+     $("#data_kosong").hide(); 
+     let url = "https://bayarimo.my.id/member/id/v1/bo/api";
+     let hallo = "https://mitrabanom.bukaolshop.site";
+     let aktivasi = "8a96368e4b71b3f3e8e19c5d4882accfaaccd79c4a56fabbc7bdcc6c79e82e0b";
+
+     let param = {
+      "aktivasi" : aktivasi,
+      "param" : "produk",
+      "url" : hallo+"/kategori/"+kategori,
+    }
+
+    $.post(url, param,
+      function(data){
+        // console.log(data)
+        if(data.data == null){
+          $("#produk_kosong").show();
+          $("#loading-esaku").hide();
+        }else{
+          loopingProduk(data.data, nama);
+          $("#loading-esaku").hide();
+        }
+      });
+  }
+
+
+
+
+  var operator = null; 
+
+  function pageKategori(nama, url, gambar, kode){
+    $(".btn-pilihan-pulsa").removeClass("bg-inti");
+    $(".btn-pilihan-pulsa").removeClass("text-white");
+    $(".btn-pilihan-pulsa").addClass("text-black");
+    $("#klik_pulsa_reguler").addClass("bg-inti");
+    $("#klik_pulsa_reguler").addClass("text-white");
+    operator = kode;
+    $("#operator_produk").html(nama);
+    document.getElementById("img_operator").src = gambar;
+    getApi(url, nama);
+  }
+  
+  
+
+  
+
+  function pilihanPulsa(val, b){
+
+   $(".btn-pilihan-pulsa").removeClass("bg-inti");
+   $(".btn-pilihan-pulsa").removeClass("text-white");
+   $(".btn-pilihan-pulsa").addClass("text-black");
+   $("#klik_pulsa_"+val).addClass("bg-inti");
+   $("#klik_pulsa_"+val).addClass("text-white");
+
+   if(val == "reguler"){
+    if(operator == null){
+     $(".list-produk-pulsa").remove();
+     getApi(urlJson("indosat"));
+   }else{
+    $(".list-produk-pulsa").remove();
+    getApi(urlJson(operator));
+  }
+}else if(val == "transfer"){
+ if(operator == null){
+   $(".list-produk-pulsa").remove();
+   getApi(urlJsonTranfer("indosat"));
+ }else{
+   $(".list-produk-pulsa").remove();
+   getApi(urlJsonTranfer(operator));
+ }
+}
+}
+
+
+
+function showProduk(val){
+ $(".btn-pilihan-pulsa").removeClass("bg-inti");
+ $(".btn-pilihan-pulsa").removeClass("text-white");
+ $(".btn-pilihan-pulsa").addClass("text-black");
+ $("#klik_pulsa_reguler").addClass("bg-inti");
+ $("#klik_pulsa_reguler").addClass("text-white");
+
+
+ operator = val;
+ getApi(urlJson(val), jsonNama(val));
+ $("#operator_produk").html(val);
+ document.getElementById("img_operator").src = json[0][val].gambar;
+
+}
+
+
+
+function cekInput(a){
+ let b;
+ if(a.substr(0,3) == "628"){
+   b = "08"+a.substr(3, 20);
+   return b;
+ }else if(a.substr(0,4) == "+628"){
+   b = "08"+a.substr(4, 20);
+   return b;
+ }else{
+   return a;
+ }
+
+}
+
+function replaceNumber() {
+  var tels = $("input[type=tel]").val(),
+    tel = tels.replace('+', '', tels),
+    tel = tel.replace('-', '', tel)
+  tel = tel.replace('-', '', tel)
+  tel = tel.replace(' ', '', tel)
+  str2 = tel.substr(0, 2)
+  if (str2 == '62') {
+    str1 = tel.substr(2, 15)
+    tel = '0' + str1
+  }
+  $("input[type=tel]").val(tel)
+  return tel
+}
+
+$("input[type=tel]").change(function() {
+  var tel = replaceNumber()
+  dtc = tel.substr(0, 4)
+  no = dtc
+  oprt(no)
+})
+
+$("input[type=tel]").keyup(function() {
+  var tel = replaceNumber()
+  no = tel
+  oprt(no)
+})
+
+
+
+ $('#nomor-val').on('change', function(){
+      var no = $('#nomor-val').val()
+      if (no.length >= 10) {
+        ceknomoruser()
+      }
+    })
+ // cek nomor operator user
+ function ceknomoruser(){
+  let b = document.getElementById("nomor-val").value;
+  let c = b;
+ 
+  let nomor = cekInput(b).substr(0,4);
+  if(nomor == "08" || nomor == ""){
+    $(".list-produk-pulsa").remove();
+
+   // telkomsel
+ }else if(nomor === '0811' || nomor === '0812' || nomor === '0813' || nomor === '0821' || nomor === '0822' || nomor === '0852' || nomor === '0853' || nomor === '0823' || nomor === '0851' || nomor === '0835'){
+
+   showProduk("Telkomsel");
+   
+   // By.u
+ } else if (nomor === '' ) {
+
+   showProduk("By.u");
+
+  // Indosat
+}else if(nomor === '0814' || nomor === '0815' || nomor === '0816' || nomor === '0855' || nomor === '0856' || nomor === '0857' || nomor === '0858'){
+
+  showProduk("Indosat");
+    // xl axiata
+  }else if(nomor === '0818' || nomor === '0817' || nomor === '0819' || nomor === '0859' || nomor === '0877' || nomor === '0878'){
+
+
+    showProduk("Xl");
+    
+    // axis
+  }else if(nomor === '0838' || nomor === '0831' || nomor === '0832' || nomor === '0833'){
+
+    showProduk("Axis");
+    // tri 
+  }else if(nomor === '0895' || nomor === '0896' || nomor === '0897' || nomor === '0898' || nomor === '0899' ){
+
+    showProduk("Tri");
+    // Smartfren
+  }else if(nomor === '0881' || nomor === '0882' || nomor === '0883' || nomor === '0884' || nomor === '0885' || nomor === '0886' || nomor === '0887' || nomor === '0888' || nomor === '0889'){
+
+    showProduk("Smartfren");
+
+  }else if(  nomor === '0' || nomor === ' ' || nomor === null){
+   $(".list-produk-pulsa").remove();
+   $("#card-kategori").show();
+   $("#loader-kategori").hide();
+   loader.style = "display: none";
+   $("#list-produk").html(`<li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="diklik">Masukkan nomor tujuan</li>`);
+ }else if(nomor === 123 || nomor === 9288){
+  $("li").remove();
+    img.src = "url gambar disinu"; // img saat operator tidak terdeteksi
+    loader.style = "display: none";
+    $("li").remove();
+    $("#list-produk").html(`<li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="diklik">Masukkan nomor tujuan dengan benar</li>`);
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+</html>

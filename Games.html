@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kembali</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style type="text/css" media="all">
+  *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body{
+ background-color: #EDF1FC;
+  }
+  .bg-inti{
+    background-color: #04befe;
+  }
+  .bg-mix{
+    background-color: #EDF1FC;
+  }
+  .color-mix{
+    color: #EDF1FC;
+  }
+  .color-inti{
+    color: #04befe;
+  }
+  h1 h2 h3 h4 h5 h6 p{
+    margin:0; 
+    padding: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+ .status p{
+   margin-bottom: 0px;
+   font-size: 12px;
+ }
+ .font-color{
+   color: #102466;
+ }
+  .op8{
+    opacity: 0.8;
+  }
+  .op6{
+    opacity: 0.4;
+  }
+  .bold{
+    font-weight: bold;
+  }
+.header{
+  width: 100%;
+  height: 8rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.btn:hover{
+  color: black;
+}
+.dropdown{
+  width: 100%;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+.dropdown-item{
+  width: 100%;
+}
+.dropdown-menu{
+  width: 98%;
+  text-align: left;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.dropdown-menu input{
+  width: 95%;
+  height: auto;
+  padding: 0.5rem;
+  margin-left: 2.5%;
+  border-radius: 7px;
+  border: 1px solid rgb(200,200,200);
+  outline: none;
+  font-size: 14px;
+}
+.inputan label{
+  font-size: 14px;
+  position: absolute;
+  background-color: white;
+  margin-left: 10px;
+  
+}
+.inputan input{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgb(210,210,210);
+  margin-top: 10px;
+  outline: none;
+}
+.cekname input{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgb(210,210,210);
+  margin-top: 10px;
+  outline: none;
+}
+.cekname label{
+  font-size: 14px;
+  position: absolute;
+  background-color: white;
+  margin-left: 10px;
+}
+.cekname button{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.row-pilihan{
+  height: auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.row-pilihan button{
+  border: none;
+  padding:0.5rem;
+  border-radius: 10px;
+}
+.btn-aktif{
+  background-color: #04befe;
+  color: white;
+}
+.font-color {
+  color : red
+}
+.warna-font {
+  color : #04befe;
+}
+
+</style>
+  </head>
+  <body>
+    <!-- NAVIGASI ATAS -->
+ <div class="container header bg-inti text-white">
+   <h6 style="padding-top:1rem; text-align:center;">Topup & beli voucher games</h6>
+   
+   <div class="container">
+     
+    <div class="dropdown mt-4">
+   
+  <a style="padding:0.1rem; padding-left:28%; width:100%; opacity:0.8" class="dropdown-toggle text-center mt-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Daftar games
+  </a>
+
+  
+  <ul class="dropdown-menu mt-1">
+    
+    <input type="text" name="" id="boxSearch" value="" placeholder="cari games..."/>
+    <li><p style="font-size:12px; margin-left:5%; opacity:0.6" class="mt-3">Top up games</p></li>
+    
+    
+    <div class="listSearch" id="menu-card-pilihan">
+      
+    </div>
+    
+    
+    
+  </ul>
+</div>
+   </div>
+ </div>
+    <!-- END NAVIGASI ATAS -->
+    
+    
+  <!-- INPUTAN USERNAME -->
+<div class="container mt-3" id="inputan-user-card">
+  
+</div>
+  <!--END INPUTAN USERNAME -->
+
+
+<!-- NAVIGASI KLIK PRODUK -->
+<div class="container" id="btn-user-card">
+  
+</div>
+<!-- END NAVIGASI KLIK PRODUK -->
+
+  <div class="container" id="produk_kosong">
+    <div style="background-color:white; border-radius:5px;" class="container p-4 shadow text-center">
+      <img style="width:100%" class="mb-3" src="https://i.postimg.cc/8zVKnv2B/20221019-222410.jpg" alt="" />
+      <h6 style="font-weight:bold;">PRODUK BELUM TERSEDIA</h6>
+      <p style="font-size:10px; color:red;"><i>Silahkan hubungi admin untuk menanyakan terkait produk ini.</i></p>
+      <a href="https://bayarimopay.webtoko.net/akun/?page=chat">
+        <button type="button" class="btn bg-inti">Hubungi admin</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="container" id="data_kosong">
+<div style="background-color: transparan; border-radius:5px;" class="container p-4  text-center">
+        <img style="width:100%" class="mb-3" src="https://i.postimg.cc/XqvfRkWX/IMG-20221112-180301-removebg-preview.png" alt="" />
+        <h6 style="font-weight:bold;">PILIH KATEGORI TERLEBIH DAHULU </h6>
+      <p style="font-size:10px; color:red;"><i>Tekan arah panah bagian atas Daftar Games.</i></p>
+
+    </div>
+  </div>
+
+  <div id="loading-esaku" class="loading-esaku mt-5">
+    <div class="container text-center mt-5">
+      <img style="width:40%;" src="https://i.postimg.cc/XJzG7Wp0/google-loading-icon-qgdhn1xi84-unscreen.gif" />
+      <p class="font-color" id="red"></p>
+
+
+    </div>
+  </div>
+
+  <!-- PRODUK -->
+  
+<div class="container" id="card-show-produk">
+  <div class="row" id="card-this-produk">
+   
+  
+    
+    
+  </div>
+</div>
+  <!-- END PRODUK -->
+
+<!-- Modal -->
+<div style="margin-top:5rem;" class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-inti text-white text-center">
+        <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembelian</h5>
+      </div>
+      <div class="modal-body">
+        
+        
+        
+        
+        <div class="container">
+          
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-3">
+          <div class="col-6 text-left">
+            <h6>USER ID</h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="inputan-user"></h6>
+          </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-4">
+          <div class="col-6 text-left">
+            <h6>Nickname</h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="html-nickname">null</h6>
+          </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219)" class="row mt-3 mb-4">
+          <div class="col-6 text-left">
+            <h6>Topup</h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="detail-nama-produk"></h6>
+          </div>
+          </div>
+          
+          <div style="border-bottom:1px solid rgb(219,219,219); padding-bottom:20px;" class="deskripsi ">
+                <h6>Deskripsi:</h6>
+                <small  id="detail-nama-deskripsi"></small>
+              </div>
+          
+          
+          <div style="padding-bottom:10px; font-weight:bold;" class="row mt-3">
+          <div class="col-6 text-left">
+            <h6>Total bayar</h6>
+          </div>
+          <div style="text-align:right;" class="col-6 text-right">
+            <h6 id="detail-nama-total"></h6>
+          </div>
+          </div>
+          
+          
+        </div>
+        
+        
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  bg-warning" data-bs-dismiss="modal">Batal</button>
+        <a id="linknya-hallo" href="">
+        <button type="button" class="btn bg-inti">Bayar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<br /><br /><br />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+      $("#produk_kosong").hide();
+      $("#btn-user-card").hide();
+      $("#data_kosong").show();
+      $("#loading-esaku").hide();
+  let json =[
+    {
+      "ff" : {
+        "nama" : "Free Fire",
+        "url" : "free-fire-250803",
+        "gambar" : "https://i.ibb.co/Yb5XXjL/20220929-173603.jpg",
+        "cekid" : "https://cekid.mitra-scbo.my.id/api/game/freefire/?id=",
+        "input" : {
+          "col" : "1",
+        },
+        "btn" : {
+          "kiri" : "Diamond",
+          "kanan" : "Membership",
+          "url_membership" : "membership-free-fire-323857",
+        }
+      },
+      
+      
+      "ml" : {
+        "nama" : "Mobile Lagends",
+        "url" : "mobile-legends-250801",
+        "gambar" : "https://i.ibb.co/NsHQNtn/20220929-181020.jpg",
+        "cekid" : "ml",
+        "input" : {
+          "col" : "2",
+        },
+        "btn" : {
+          "kiri" : "Diamond",
+          "kanan" : "Membership",
+          "url_membership" : "membership-ml-323858",
+        }
+      },
+      
+      
+      "aov" : {
+        "nama" : "Arena Of Valor",
+        "url" : "arena-of-valor-250814",
+        "gambar" : "https://i.ibb.co/jv15Lh2/20220929-182419.jpg",
+        "cekid" : "https://bayarimo.my.id/cekid/api/game/aov/?id=",
+        "input" : {
+          "col" : "1",
+        },
+        "btn" : {
+          "kiri" : "kosong",
+          "kanan" : "kosong",
+          "url_membership" : "",
+        }
+      },
+      
+      
+      
+      "pubg" : {
+        "nama" : "Pubg Mobile",
+        "url" : "pubg-250805",
+        "gambar" : "https://i.ibb.co/QMtcSK8/20220929-190030.jpg",
+       "cekid" : "https://api-bo.my.id/v2.1/game/mobilelegends/?id=",
+        "input" : {
+          "col" : "4",
+        },
+        "btn" : {
+          "kiri" : "UC",
+          "kanan" : "Membership",
+          "url_membership" : "royalpass-pubg-323859",
+        }
+      },
+      
+
+      
+      "Geshin Impact": {
+        "nama": "Geshin Impact",
+        "url": "geshin-impact-250815",
+        "gambar": "https://i.ibb.co/6w71FVs/20220929-232838.jpg",
+       "cekid" : "gensin",
+        "input": {
+          "col": "5",
+        },
+        "btn": {
+          "kiri": "kosong",
+          "kanan": "Membership",
+          "url_membership": "",
+        }
+      },
+     "Sausage Man": {
+       "nama": "Sausage Man",
+       "url": "sausage-man-322674",
+       "gambar": "https://i.ibb.co/Lg82fvS/20220930-000226.jpg",
+       "cekid" : "https://api-bo.my.id/v2.1/game/mobilelegends/?id=",
+       "input": {
+         "col": "4",
+       },
+       "btn": {
+         "kiri": "kosong",
+         "kanan": "Membership",
+         "url_membership": "",
+       }
+     },     
+     
+      "Higgs ": {
+        "nama": "Higgs Domino",
+        "url": "higgs-domino-250817",
+        "gambar": "https://i.ibb.co/rs5C3cv/20220930-000907.jpg",
+       "cekid" : "https://bayarimo.my.id/cekid/api/game/higgsdomino/?id=",
+        "input": {
+          "col": "1",
+        },
+        "btn": {
+          "kiri": "Koin MD",
+          "kanan": "Kuning",
+          "url_membership": "chip-kuning-323861",
+        }
+      },   
+      
+      
+      
+      "Call of Duty": {
+        "nama": "Call of Duty",
+        "url": "call-of-duty-250812",
+        "gambar": "https://i.ibb.co/NFLXq8F/20220930-001838.jpg",
+       "cekid" : "https://bayarimo.my.id/cekid/api/game/callofduty/?id=",
+        "input": {
+          "col": "1",
+        },
+        "btn": {
+          "kiri": "kosong",
+          "kanan": "Membership",
+          "url_membership": "",
+        }
+      },   
+      
+      "Super Sus": {
+        "nama": "Super Sus",
+        "url": "super-sus-250819",
+        "gambar": "https://i.postimg.cc/GmKDXpjR/64640445.jpg",
+      "cekid" : "valorant",
+        "input": {
+          "col": "4",
+        },
+        "btn": {
+          "kiri": "kosong",
+          "kanan": "Membership",
+          "url_membership": "",
+        }
+      },    
+      
+    }
+    ];
+  
+  
+  
+  // cetak menu bagian atas pilihan kategori ini 
+  function loopingMenu(lopp){
+  $.each(lopp, function(i, data){
+     $('#menu-card-pilihan').append(`<li class="mt-3" onclick="sendData('`+data.nama+`', '`+data.url+`', '`+data.gambar+`', '`+data.input.col+`', '`+data.btn.kiri+`', '`+data.btn.kanan+`', '`+data.btn.url_membership+`', '`+data.cekid+`')">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img style="width:100%; height:auto; border-radius:50px;" src="`+data.gambar+`" alt="" />
+          </div>
+          <div style="font-size:14px; opacity:0.8;" class="col-10 mt-1">
+            `+data.nama+`
+          </div>
+        </div>
+      </div>
+    </li>`);
+      });
+   
+
+  }  loopingMenu(json[0]);
+  
+  
+  
+  
+  
+ $(document).ready(function($){
+
+        $('#menu-card-pilihan li').each(function(){
+            $(this).attr('searchData', $(this).text().toLowerCase());
+        });
+        $('#boxSearch').on('keyup', function(){
+        var dataList = $(this).val().toLowerCase();
+            $('#menu-card-pilihan li').each(function(){
+              
+                if ($(this).filter('[searchData *= ' + dataList + ']').length > 0 || dataList.length < 1) {
+                    $(this).show();
+                }else if($("#boxSearch").val() == "" || $("#boxSearch").val() == " " || $("#boxSearch").val() == null || $("#boxSearch").val().length == 0){
+                  loopingMenu(json[0]);
+                }
+                else {
+                    $(this).hide();
+                }
+            });
+        });
+    
+    });
+  
+  
+  
+  
+  
+  // show input value ml, ff atur jumlah input yang akan di tampilkan 
+  function showInput(val, nama, gambar, cekid){
+   
+   console.log(cekid);
+    if(val == 1){
+    $(".konten-inputan-user").remove();
+     $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container bg-white konten-inputan-user shadow" >
+    <div class="mt-4">
+      <div class="row mt-3">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-3 inputan">
+      <label for="">User id</label>
+      <input type="number" name="" id="input-user-val1" value="" placeholder="Masukkan User Id..."/>
+    </div>
+    <div class="cekname mt-3">
+      <div class="row">
+        <div class="col-8">
+          <label for="">Nickname</label>
+          <input class="warna-font" type="text" name="" id="hasilIdGames" value="" placeholder="Nickname.."/>
+        </div>
+        <div class="col-4">
+          <button onclick="cekIdGames('`+cekid+`')" class="bg-inti" type="button">CEK.ID</button>
+        </div>
+      </div>
+    </div>
+    
+    <br />
+  </div>`);
+    }
+    
+    else if(val == 2){
+      $(".konten-inputan-user").remove();
+      $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container bg-white konten-inputan-user shadow">
+    <div class="mt-4">
+      <div class="row mt-3">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div style="width:100%; float:left;" class="inputan">
+      <label for="">User id</label>
+      <input style="width:60%;" type="number"  class="input-user-val1" name="" id="input-user-val1" value="" placeholder="Masukkan User Id..."/>
+      
+      
+    <div style="width:35%; float:right;">
+      <label style="margin-left:5%" for="">Zone id</label>
+      <input style="width:90%; margin-left:10%;" class="input-user-val2" type="number" name="" id="input-user-val2" value="" placeholder="Zone.." />
+    </div>
+    </div>
+    <div style="clear:both"></div>
+    
+    
+    
+    <div class="cekname mt-3">
+      <div class="row">
+        <div class="col-8">
+          <label for="">Nickname</label>
+          <input type="text" name="" class="warna-font" id="hasilIdGames" value="" placeholder="Nickname.."/>
+        </div>
+        <div class="col-4">
+          <button onclick="cekIdGames('`+cekid+`')" class="bg-inti" type="button">CEK.ID</button>
+        </div>
+      </div>
+    </div>
+    
+    <br /><br/><br>
+  </div>    <br />`);
+    }
+    
+    
+    else if(val == 3){
+      $(".konten-inputan-user").remove();
+      $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container bg-white konten-inputan-user shadow">
+    <div class="mt-4">
+      <div class="row mt-3">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div style="width:100%; float:left;" class="inputan">
+      <label for="">User id</label>
+      <input style="width:60%;" type="number" name="" id="input-user-val1" value="" placeholder="Masukkan User Id..."/>
+      
+      
+    <div style="width:35%; float:right;">
+      <label style="margin-left:5%" for="">Server</label>
+      <input style="width:90%; margin-left:10%;" type="text" name="" id="" value="" placeholder="Zone.."/>
+    </div>
+    </div>
+    <div style="clear:both"></div>
+    
+    
+    
+    <div class="cekname mt-3">
+      <div class="row">
+        <div class="col-8">
+          <label for="">Nickname</label>
+          <input type="text" name="" id="" value="" placeholder="Nickname.."/>
+        </div>
+        <div class="col-4">
+          <button class="bg-inti" type="button">CEK.ID</button>
+        </div>
+      </div>
+    </div>
+    
+    <br /><br/><br>
+  </div>    <br />`);
+    }
+    
+    
+    else if(val == 4){
+      $(".konten-inputan-user").remove();
+      $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container bg-white konten-inputan-user shadow">
+    <div class="mt-4">
+      <div class="row mt-3">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div style="width:100%; float:left;" class="inputan mt-2">
+      <label for="">User id</label>
+      <input style="width:100%;" type="text" name="" id="input-user-val1" value="" placeholder="Masukkan User Id..."/>
+      
+      
+    <br /><br/><br>
+  </div>    <br />`);
+    }
+    
+   else if(val == 5){
+      $(".konten-inputan-user").remove();
+      $("#inputan-user-card").show();
+     $('#inputan-user-card').append(`<div style="border-radius:10px; padding:0.2" class="container bg-white konten-inputan-user shadow">
+    <div class="mt-4">
+      <div class="row mt-3">
+        <div class="col-2 mt-3">
+          <img style="width:100%; height:auto; border-radius:50px;" src="`+gambar+`" alt="" />
+        </div>
+        <div class="col-10 mt-4 text-left">
+          <h6>`+nama+`</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div style="width:100%; float:left;" class="inputan">
+      <label for="">User id</label>
+      <input style="width:60%;" type="number" name="" id="input-user-val1" value="" placeholder="Masukkan User Id..."/>
+      
+      
+    <div style="width:35%; float:right;" class="mt-2">
+      <label style="margin-left:5%; margin-top:-10px;" for="">Zone id</label>
+      <select style="width:90%; margin-left:10%; padding:0.7rem; border-radius:10px; outline:none; background-color:white; border:1px solid rgb(217,217,217)" type="text" name="" id="input-user-val2" value="" placeholder="Zone.."/>
+      <option selected style="opacity:0.5;">zone id..</option>
+  <option value="os_asia">Asia</option>
+  <option value="os_america">America</option>
+  <option value="os_europe">Europe</option>
+  <option value="os_tw">TW, HK, MO</option>  
+      </select>
+      
+    </div>
+    </div>
+    <div style="clear:both"></div>
+    
+    
+    
+    <div class="cekname mt-3">
+      <div class="row">
+        <div class="col-8">
+          <label for="">Nickname</label>
+          <input type="text" name="" id="hasilIdGames" value="" placeholder="Nickname.."/>
+        </div>
+        <div class="col-4">
+          <button onclick="cekIdGames('`+cekid+`')" class="bg-inti" type="button">CEK.ID</button>
+        </div>
+      </div>
+    </div>
+    
+    <br /><br/><br>
+  </div>    <br />`);
+    }
+  }
+  
+  
+  // tombol yang akan di tambilkan
+  function showBtn(kiri, kanan, url, membership, gambar){
+    $(".konten-btn-klik").remove();
+    
+    if(kiri == "kosong"){
+      $("#btn-user-card").hide();
+      $(".konten-btn-klik").remove();
+    }else{
+    $("#btn-user-card").show();
+    $('#btn-user-card').append(`<div class="container row-pilihan mt-3 bg-white konten-btn-klik">
+  <div class="row">
+    <div class="col-6 text-center">
+      <button class="w-100 btn-aktif btn-klik-btn" type="button" onclick="btnKliked('`+kiri+`', '`+url+`', '`+gambar+`')" id="`+kiri+`">`+kiri+`</button>
+    </div>
+    <div class="col-6 text-center">
+      <button class="w-100 btn-klik-btn" type="button" onclick="btnKliked('`+kanan+`' ,'`+membership+`' , '`+gambar+`')" id="`+kanan+`">`+kanan+`</button>
+    </div>
+  </div>
+  </div>`);
+    }
+  }
+  
+  
+  
+  
+  // looping produk
+  function loopingProduk(produk){
+    $("#card-show-produk").show();
+    $(".data-card-produk-produk").remove();
+    $.each(produk, function(i, data){
+     $('#card-this-produk').append(`<div class="col-4 mt-3 data-card-produk-produk" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="showDeskripsi('`+data.nama+`', '`+data.harga+`','`+data.url+`')">
+      <div style="border-radius:8px " class="container bg-white text-center shadow">
+        <div style="padding:0.3rem;" class="card-produk">
+          <img class="mt-2" style="width:80%; border-radius:10px" src="`+data.gambar+`" alt="" />
+          <p style="font-size:11px; margin-bottom:5px;" class="mt-1 op8">`+data.nama+`</p>
+        <h3 style="font-size:14px; class="mt-1 op8">`+data.harga+`</h3>
+        </div>
+      </div>
+    </div>`);
+      });
+  }
+  
+  
+  
+  
+  function showDeskripsi(nama, harga, link){
+  //  let url = "https://bayarimo.my.id/api-bo/detail.php?produk=";
+    
+    
+  let hallo = "https://bayarimopay.webtoko.net";
+//  let aktivasi = "September2022";
+  
+   $("#detail-nama-produk").html(nama);
+   $("#detail-nama-total").html(harga);
+  
+  var jinput;
+   if($("#input-user-val2").val() == undefined){
+     jinput = "";
+     $("#inputan-user").html($("#input-user-val1").val());
+   }else{
+     jinput = $("#input-user-val2").val();
+     $("#inputan-user").html($("#input-user-val1").val()+$("#input-user-val2").val());
+   }
+  document.getElementById("linknya-hallo").href = link+"?catatan="+$("#input-user-val1").val()+jinput;
+  $("#html-nickname").html($("#hasilIdGames").val());
+  
+  
+   let url = "https://bayarimo.my.id/member/id/v1/bo/api";
+   let aktivasi = "c7f17e2a853d069f7982a34035c803a3cd7ddbb2656630fa1af731abcd21f533";
+  let param = 
+   {
+     "aktivasi" : aktivasi,
+     "param" : "detail",
+     "url" : link,
+   }
+   $.post(url, param, 
+   function(data, status){
+
+    $("#detail-nama-deskripsi").html(data.data);
+   });
+  
+
+  }
+  
+  
+  
+  // get request data produk
+  function getApi(kategori){
+  //  alert(kategori);
+   $("#produk_kosong").hide();
+   $("#loading-esaku").show();
+   $("#data_kosong").hide();
+  let url = "https://bayarimo.my.id/member/id/v1/bo/api";
+  let hallo = "https://bayarimopay.webtoko.net";
+  let aktivasi = "c7f17e2a853d069f7982a34035c803a3cd7ddbb2656630fa1af731abcd21f533";
+  
+   let param = 
+   {
+     "aktivasi" : aktivasi,
+     "param" : "produk",
+     "url" : hallo+"/kategori/"+kategori,
+   }
+   $.post(url, param, 
+   function(data, status){
+     
+     if (data.kode == 200) {
+       loopingProduk(data.data);
+      $("#loading-esaku").hide();
+     }else{
+       $("#produk_kosong").show();
+      $("#loading-esaku").hide();
+      $("#data_kosong").hide();
+     }
+   //  console.log(data);
+    
+   });
+
+  }
+  
+  
+    // klik btn
+ function btnKliked(e, url, gambar){
+$(".data-card-produk-produk").remove();
+   $(".btn-klik-btn").removeClass("btn-aktif");
+   $("#"+e).addClass("btn-aktif");
+   getApi(url, gambar);
+ }
+  
+  
+  
+  
+  
+  // CEK ID GAMES 
+ function cekIdGames(url){
+ 
+ // gensin impact
+   if(url == "gensin"){
+  $("#hasilIdGamesgi").val("Loading...");
+  let nick = $("#input-user-val1").val();
+  let server = $("#input-user-val2").val();
+   $.getJSON("https://bayarimo.my.id/cekid/api/game/gensin/?id="+nick+"&server="+server+"&key=8272b58207a73d9", function(data){
+    console.log(data);
+     let result;
+     if (data.error_msg != "") {
+       result = "Data id tidak ditemukan";
+     }else {
+       result = data.nickname;
+     };
+   //  console.log(data)
+     $("#hasilIdGames").val(result);
+     $("#html-nickname").html(data.nickname);
+   });
+   }
+   
+   
+   // valorant
+   else if(url == "valorant"){
+     $("#hasilIdGames").val("loading...");
+     let nick = $("#input-user-val1").val();
+     $("#hasilIdGames").val("loading...");
+     let uri = "https://api-bo.my.id/v2.1/game/valorant";
+     let param = {
+       "id" : nick,
+       "key": "MitrascVIP",
+     }
+     
+     $.post("https://api-bo.my.id/v2.1/game/valorant", param, 
+     function(data, status){
+
+     });
+   }
+   
+   
+   else if(url == "ml"){
+
+   $("#hasilIdGames").val("loading...");
+  let nick = $("#input-user-val1").val();
+  let zone = $("#input-user-val2").val();
+$.getJSON("https://cekid.mitra-scbo.my.id/api/game/mobilelegends/?id="+nick+"&zone="+zone+"&key=KIOSPULSA", function(data){
+   //  console.log(data);
+   $("#hasilIdGames").val(data.nickname);
+   $("#html-nickname").html(data.nickname);
+});
+   }
+
+   
+   else{
+  $("#hasilIdGames").val("loading...");
+  let nick = $("#input-user-val1").val();
+   $.getJSON(url+nick+"&key=MitrascVIP", function(data){
+  //   console.log(data)
+     $("#hasilIdGames").val(data.nickname);
+     $("#html-nickname").html(data.nickname);
+});
+}
+ } ;
+ 
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+  function sendData(nama, url, gambar, input, kiri, kanan, membership, cekid){
+  //  console.log(kiri);
+    $(".data-card-produk-produk").remove();
+    showInput(input, nama, gambar, cekid);
+    showBtn(kiri, kanan, url, membership, gambar);
+    getApi(url);
+    
+  }
+ 
+ 
+ 
+ 
+  
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+    
+  </body>
+</html>
