@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="in">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="QTDZGg4eI4QVXI4Da0wseMNw78gpU3__fC_CLd_QQgk" />
+    <title>MITRA BANOM</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/6165a5b20e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka One', sans-serif;
+    margin: 0;
+}
+
+a:hover {
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: #0d47a1;
+}
+
+.header-fixed{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: #0d47a1;
+    z-index: 3;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 7px 7px 0 rgb(0,0,0,0.4);
+}
+
+.bg_header {
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    background: #0d47a1;
+}
+
+.bg_header::after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    display: block;
+    background: white;
+    height: 100%;
+    transform: skewY(-8deg);
+}
+
+.bg_header::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    display: block;
+    background: #fff;
+    height: 100%;
+    transform: skewY(8deg);
+}
+
+.name_brand {
+    font-weight: 700;
+    font-family: 'Verdana', sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 25px;
+    margin: 3px 0 7px;
+    -webkit-tap-highlight-color: transparent;
+}
+.img-header {
+    width: 90%;
+    margin-top: 5px;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.name_saldo {
+    font-family: verdana;
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 550;
+    margin: 0 0 0 25px;
+}
+
+.greeting_user {
+    text-align: left;
+    margin: 10px 0 0 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.saldo_user {
+    font-weight: 600;
+    color: white;
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+.membership {
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    margin: 14px 0 0 30px;
+}
+
+.header_icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-left: -20px;
+}
+
+.list_header {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    margin-left: 20px;
+}
+
+.icon_list_header,
+.wrap_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: max-content;
+}
+
+.wrap_icon_list_header {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.icon_header {
+    width: 31px;
+    height: 31px;
+}
+
+.text_icon_header {
+    font-weight: 500;
+    color: #fff;
+    margin-top: 8px;
+    letter-spacing: 0.4px;
+}
+
+.panel {
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.1);
+    margin: -55px 15px 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
+    z-index: 2;
+    gap: 10px;
+}
+
+.icon_panel {
+    width: 30px;
+    height: 30px;
+}
+
+.figure_el {
+    margin: 0;
+}
+
+.text_panel {
+    color: #000;
+    font-size: 12px;
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+.wrap_panel,
+.icon_list_header {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.text-product {
+    grid-column: 1/-1;
+    justify-self: start;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Verdana;
+    margin: 10px 0 0 10px;
+}
+
+.bottom-panel {
+    margin: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.tab {
+    overflow: hidden;
+    border: none;
+    background-color: #fff;
+    margin-left: 10px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    width: 23%;
+    font-weight: 500;
+    background: rgba(213, 213, 213, 0.3);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #5b5a5c;
+    font-size: 13px;
+    border-radius: 50px;
+    margin: 2%;
+    padding: 7px;
+    font-family: 'Verdana', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tab button.active {
+    background-color: #0d47a1;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.tabcontent {
+    border-top: none;
+    margin: 20px 0;
+    transition: 400ms ease-in-out;
+    transform: translateX(100%) scale(0);
+    left: 100%;
+    position: absolute;
+}
+
+.tabcontent.active {
+    position: static;
+    display: block;
+    transform: translateX(0) scale(1);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.link-bottom-panel {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    color: #333;
+    font-size: 11.7px;
+    font-weight: 600;
+    font-family: Arial;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.link-bottom-panel:hover {
+    text-decoration: none;
+}
+
+.icon-bottom-panel {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.wrap_saldo_user {
+    display: flex;
+    column-gap: 1px;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+.text-rp {
+    font-size: 15px;
+    margin-top: 6px;
+    font-weight: 450;
+    font-family: monospace;
+}
+
+.notiflink {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.notificons {
+    width: 80px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 10px;
+    z-index: 10;
+}
+.navigation2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 10px;
+    z-index: 10;
+}
+.wrap-saldo-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+.avatar {
+    width: 58px;
+    height: 58px;
+    margin-top: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #FFF;
+    overflow: hidden;
+    border: 2px solid #0096ff;
+}
+
+.wave {
+    opacity: 0.9;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 100px;
+    background-image: url(https://i.ibb.co/7G9sS7k/20220618-071339.png);
+    background-size: cover;
+    animation: waveAnimate 15s linear infinite alternate;
+}
+
+@keyframes waveAnimate {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 1000px;
+    }
+}
+
+.wave::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 15px;
+    opacity: 0.4;
+    left: 0;
+    background-image: url(https://i.ibb.co/7G9sS7k/20220618-071339.png);
+    background-size: cover;
+    animation: waveAnimate2 15s linear infinite alternate;
+}
+
+@keyframes waveAnimate2 {
+    0% {
+        background-position: 1000px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+hr {
+    border: none;
+    height: 8px;
+    color: #eaeaea;
+    background-color: #F4F4F4;
+}
+
+/* card */
+
+.title__el__menarik {
+    color: #0d47a1;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 16px;
+    margin-bottom: 8px;
+}
+
+.paragraph__el__update {
+    color: rgb(104, 104, 104);
+    font-size: 10px;
+    margin-top: 12px;
+    margin-left: 14px;
+}
+
+.cards__header__menarik {
+    margin-top: 15px;
+    display: grid;
+    margin: 13px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card__body__menarik {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.11);
+    height: 228px;
+    position: relative;
+}
+
+.image--card--body--menarik {
+    object-fit: cover;
+    width: 100%;
+    height: 85px;
+    border-radius: 10px 10px 0 0;
+}
+
+.text__card__body__menarik {
+    padding: 5px 10px 20px;
+}
+
+.title__card__body__menarik {
+    margin: 0;
+    color: rgb(73, 73, 73);
+    font-size: 12px;
+}
+
+.paragraph__card__body__menarik {
+    margin: 8px 0;
+    color: rgb(104, 104, 104);
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    line-height: 13px;
+}
+
+.link__card__body__menarik {
+    color: #0d47a1;
+    text-decoration: none;
+    font-size: 12.4px;
+    text-align: center;
+    display: block;
+    margin-top: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container__cards__menarik {
+    font-family: "Roboto", sans-serif;
+}
+
+/* popup lainnya */
+table.bluetable tfoot .links {
+    text-align: right;
+}
+
+table.bluetable tfoot .links a {
+    display: inline-block;
+    background: #1c6ea4;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* the modal (background) */
+.modal {
+    display: none;
+    /* hidden by default */
+    position: fixed;
+    /* stay in place */
+    z-index: 3;
+    /* sit on top */
+    padding-top: 250px;
+    /* location of the box */
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    /* full width */
+    height: 100%;
+    /* full height */
+    overflow: auto;
+    /* enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* black w/ opacity */
+    ;
+}
+
+/* modal content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 95vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.2s;
+    animation-name: animatetop;
+    animation-duration: 0.7s;
+}
+
+/* add animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: 300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: 400px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* the close button */
+.close {
+    color: #949494;
+}
+
+.close:hover,
+.close:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* slide */
+.swiper-wrapper,
+.swiper-container {
+    display: flex;
+}
+
+.swiper-slider-center {
+    margin-top: 10px;
+    position: relative;
+    padding-bottom: 28px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 152px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.swiper-slider-center .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-slider-center .swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-slider-center .swiper-pagination-custom,
+.swiper-slider-center .swiper-pagination-fraction {
+    left: 10px;
+    bottom: 0;
+    width: auto;
+    z-index: -2;
+}
+
+.swiper-slider-center .swiper-pagination-bullet {
+    opacity: 0.3;
+    transition: 300ms ease-in-out;
+    background-color: #0d47a1;
+    z-index: -2;
+}
+
+.swiper-slider-center .swiper-pagination-bullet-active {
+    opacity: 0.8;
+    width: 32px;
+    border-radius: 8px;
+}
+
+.see-all {
+    color: #0d47a1;
+    text-decoration: none;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.ic{
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  box-shadow: 4px 4px 4px 4px;
+  border-radius: 30%;
+  color: black;
+  font-size: 12px;
+  
+}
+.popup {
+	position: fixed;
+	z-index: 10;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: 300ms ease-in;
+	opacity: 0;
+	transform: scale(0);
+}
+
+.popup.show {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.anu {
+	background-color: #fff;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	right: 0;
+	padding: 20px 14px;
+	color: #212529;
+	transition: 300ms ease-in-out 300ms;
+	z-index: 30;
+}
+
+.anu.show {
+	bottom: 0;
+}
+
+
+.icon-button {
+  margin-right: 20px;
+  margin-top: -5px;
+  margin-left: -39px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  color: white;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.icon-button:hover {
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+}
+
+.icon-button:active {
+  background: transparent;
+  color: #fff;
+}
+
+.icon-button__badge {
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  width: 15px;
+  height: 15px;
+  background: #f0f0f0;
+  color: #0d47a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+	.box2 {
+				background-color: #0d47a0;
+				color: #000;
+				font-family: "Poppins";
+				border-radius: 10px;
+				border: 1px solid rgb (233,233,233),;
+				padding: 5px;
+				margin: 2%;
+				margin-bottom:10px;
+				width: 96%;
+				height: 28px;
+				float: left;
+				font-size: 10px;
+				position: relative;
+				z-index: 2;
+				overflow: ellipsis;
+				}        
+.imgicon {
+				border-radius: 100px;
+				width: 8%;
+				height: auto;
+				padding: 0px;
+				background-color: transparent;
+				float: left;
+				margin-top: -5px;
+				} 
+marquee {
+  color: #fff;
+  font-family:'urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: ;
+  margin-left: 0%;
+  height: 2%;
+  text-align: left;
+  margin-top: -1px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  width: 92%
+}				 
+.info-trx{
+  border: 2px solid #fff;
+  background:transparent;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 12pt;
+}
+.info-trx::hover{
+    border: 2px solid #fff;
+  background:transparent;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 12pt;
+}
+</style>
+    <!-- Swiperjs -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <section class="header-fixed">
+      <nav class="navigation">
+        <img src="https://i.ibb.co/MGMh60B/20220618-000629.png" style="width:40px; height:40px;">
+        <div>
+          <!--<a href="https://mitrabanom.bukaolshop.site/akun/?page=transaksi" class="info-trx">
+            <span>0 Trx</span>
+          </a>-->
+          <a href="https://mitrabanom.bukaolshop.site/akun/?page=notifikasi" type="button" class="icon-button">
+    <span class="material-icons">notifications</span>
+    <span class="icon-button__badge">{{total_notif}}</span>
+  </a>
+        </div>
+      </nav>
+    </section>
+    <section class="bg_header">
+      <!-- Wave / Gelombang -->
+      <div class="wave"></div>
+    </section>
+    <section class="panel">
+      <figure class="figure_el">
+      <span id="saldo_user">{{saldo_user}}</span>
+      </figure>
+      <a href="https://mitrabanom.bukaolshop.site/akun/?page=topup" class="wrap_panel">
+        <figure class="figure_el">
+          <img src="https://i.ibb.co/q0yLCcw/20220226-122245-copy-1552x1552.png" class="icon_panel" />
+        </figure>
+        <span class="text_panel">Topup</span>
+      </a>
+      <a href="https://mitrabanom.bukaolshop.site/akun/?page=withdraw" class="wrap_panel">
+        <figure class="figure_el">
+          <img src="https://i.ibb.co/1Z4P2vg/20220226-122520-copy-1553x1553.png" class="icon_panel" />
+        </figure>
+        <span class="text_panel">Withdraw</span>
+      </a>
+      <a href="https://mitrabanom.bukaolshop.site/akun/?page=saldo_history" class="wrap_panel">
+        <figure class="figure_el">
+          <img src="https://i.ibb.co/MZjwfYP/clock.png" class="icon_panel" />
+        </figure>
+        <span class="text_panel">Riwayat</span>
+      </a>
+    </section>
+    <br />
+    <div class="box2">
+<img class="imgicon" src="https://i.ibb.co/rH9LpML/20220618-033534.png">				
+<center>
+<marquee>Hai {{nama_user}}. kami sedang dalam perbaikkan, dimohon jangan melakukan transaksi terlebih dahulu</marquee></center></p>
+</div></div>
+<br><br>
+    <div class="swiper-container swiper-slider-center">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+          <img src="https://i.ibb.co/KWpc1jK/20220618-050019.jpg" alt="gambar"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+          <img src="https://i.ibb.co/WBzNs2n/20220618-054443.jpg" alt="gambar"></a>
+        </div>
+         <div class="swiper-slide">
+          <a href="#">
+          <img src="https://i.ibb.co/W31Ykyn/20220618-050741.jpg" alt="gambar"></a>
+        </div>       
+      </div>
+    </div>
+    <section class="panel-list">
+      <div class="tabcontent active">
+        <section class="bottom-panel">
+          <a href="https://mitrabanom.bukaolshop.site/digital/128602" class="link-bottom-panel">
+            <img src="https://i.ibb.co/KX95tM6/20211229-071432.jpg" alt="telkomsel" class="icon-bottom-panel"/> Pulsa Reguler </a>
+          <a href="https://mitrabanom.bukaolshop.site/digital/128601" class="link-bottom-panel">
+            <img src="https://i.ibb.co/KX95tM6/20211229-071432.jpg" alt="telkomsel" class="icon-bottom-panel" /> Pulsa Transfer </a>
+          <a href="https://mitrabanom.bukaolshop.site/digital/128608" class="link-bottom-panel">
+            <img src="https://i.ibb.co/x8DcR6b/20211229-072423.jpg" alt="telkomsel" class="icon-bottom-panel" /> Paket SMS & Telepon </a>
+          <a href="https://mitrabanom.bukaolshop.site/digital/128607" class="link-bottom-panel">
+            <img src="https://i.ibb.co/xHNKJh5/20211229-071727.jpg" alt="telkomsel" class="icon-bottom-panel" /> Paket Data </a>
+          <a href="https://mitrabanom.bukaolshop.site/digital/128619" class="link-bottom-panel">
+            <img src="https://i.ibb.co/T4HMwmS/20211229-071815.jpg" alt="telkomsel" class="icon-bottom-panel" /> Token Listrik </a>
+          <a href="https://mitrabanom.bukaolshop.site/digital/128617" class="link-bottom-panel">
+            <img src="https://i.ibb.co/GknST20/20211229-071658.jpg" alt="telkomsel" class="icon-bottom-panel" /> E-Money </a>
+          <a href="https://mitrabanom.bukaolshop.site/digital/128618" class="link-bottom-panel">
+            <img src="https://i.ibb.co/0QS25jY/20211229-071840.jpg" alt="telkomsel" class="icon-bottom-panel" /> Topup Game</a>
+            <a href="https://mitrabanom.bukaolshop.site/digital/128620" class="link-bottom-panel">
+            <img src="https://i.ibb.co/F47f8jn/20220618-180423.jpg" alt="telkomsel" class="icon-bottom-panel" /> Lainnya </a>
+        </section>
+      </div>
+<hr>
+    <!-- card -->
+    <section class="container__cards__menarik">
+      <div class="cards__header__menarik">
+        <div class="card__body__menarik">
+          <img src="https://i.ibb.co/yFhH3Np/20220618-073707.jpg" alt="Cats" class="image--card--body--menarik" />
+          <div class="text__card__body__menarik">
+            <h2 class="title__card__body__menarik">Pusat Bantuan</h2>
+            <p class="paragraph__card__body__menarik">Punya kendala atau pertanyaan terkait MITRA BANOM? Hubungi kami di sini</p>
+            <a href="https://wa.me/6281567777846" class="link__card__body__menarik">Hubungi Sekarang</a>
+          </div>
+        </div>
+        <div class="card__body__menarik">
+          <img src="https://i.ibb.co/8KvBjsz/20220618-073933.jpg" alt="Cats" class="image--card--body--menarik" />
+          <div class="text__card__body__menarik">
+            <h2 class="title__card__body__menarik">Promo Voucher</h2>
+            <p class="paragraph__card__body__menarik">Yuk Claim Voucher Dan Promo Menarik Untuk Kamu</p>
+            <a href="https://mitrabanom.bukaolshop.site/pages?voucher" class="link__card__body__menarik">Claim Sekarang</a>
+          </div>
+        </div>
+        <div class="card__body__menarik">
+          <img src="https://i.ibb.co/Xyc9HK0/20220618-073217.jpg" alt="Cats" class="image--card--body--menarik" />
+          <div class="text__card__body__menarik">
+            <h2 class="title__card__body__menarik">TopUp WhatsApp</h2>
+            <p class="paragraph__card__body__menarik">TopUp Tanpa Biaya Admin ? yuk Topup Via WhatsApp</p>
+            <a href="https://wa.me/6281567777846?text=*Halo%20kak*%20Saya%20Ingin%20melakukan%20Deposit%20Saldo%20MITRA BANOM" class="link__card__body__menarik">TopUp Sekarang!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://dipayin.donpedia.my.id/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1.1,
+				centeredSlides: true,
+				loop: true,
+				spaceBetween: 10,
+				slideToClickedSlide: true,
+				autoplay: {
+					// Delay ini waktu berapa detik slide nya digeser secara otomatis, disini saya kasih 5000 artinya 5detik
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		</script>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+    <!-- Letakkan script dibagian paling bawah halaman -->
+    <script type="text/javascript">
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Saldo anda : Rp "+ribuan;
+      }
+      document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+      
+      document.getElementById("id_user").innerText=rubah(document.getElementById("id_user").textContent);
+    </script>    
+    
+    
+<!--JAVA SCRIPT POP UP INFORMASI-->
+<script>
+function httpskiosidbukaolshopsiteakunlogin() {
+  document.getElementById("info").style.width = "100%";
+}
+function httpskiosidbukaolshopsite() {
+  document.getElementById("info").style.width = "0";
+}
+</script>
+
+<script>
+function httpkiosidbukaolshopsiteakunlogin() {
+  document.getElementById("info2").style.width = "85%";
+}
+function httpkiosidbukaolshopsite() {
+  document.getElementById("info2").style.width = "0";
+}
+</script>
+<!--  -->
+</div>
+</div>
+</head>
+</html>
+
+</body>
+</html>
+</br>
+<div id="saldo_user"></div>
+
+    <!-- Letakkan script dibagian paling bawah halaman -->
+    <script type="text/javascript">
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Saldo : Rp."+ribuan;
+      }
+      document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+    </script>
+</br>
+  </body>
+</html>
